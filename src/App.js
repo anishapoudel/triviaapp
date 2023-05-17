@@ -8,14 +8,7 @@ function App() {
   const [text, setText] = useState([]);
   const [category, setCategory] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(
-  //     "https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=multiple"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => setTriviaData(data.results))
-  //     .catch((error) => console.log("Error: ", error));
-  // }, []);
+  
 
   const handleSubmit = () => {
     fetch(
