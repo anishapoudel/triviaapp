@@ -27,19 +27,25 @@ function Question({ counter = 0, category, question, correct, incorrect }) {
   return (
     <div>
       <h4>{category}</h4>
-      <h2 dangerouslySetInnerHTML={{ __html: question }}></h2>
+      <h4
+        style={{ color: "green" }}
+        dangerouslySetInnerHTML={{ __html: question }}
+      ></h4>
       <ul>
-        {options.map((answer, index) => (
-          <ul key={index}>
-            <button
-              style={{ backgroundColor: checkIfCorrect(answer) }}
-              onClick={() => handleAnswerClick(answer)}
-            >
-              {" "}
-            </button>{" "}
-            {answer}
-          </ul>
-        ))}
+        <div style={{ textAlign: "left", marginLeft: "550px" }}>
+          {options.map((answer, index) => (
+            <ul key={index}>
+              <button
+                style={{ backgroundColor: checkIfCorrect(answer) }}
+                onClick={() => handleAnswerClick(answer)}
+              >
+                {" "}
+              </button>{" "}
+              {answer}
+              {/* <h5>dangerouslySetInnerHTML={{ __html: answer }}</h5> */}
+            </ul>
+          ))}
+        </div>
       </ul>
       {/* {counter} */}
     </div>
